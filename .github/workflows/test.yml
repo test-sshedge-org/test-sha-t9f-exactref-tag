@@ -1,0 +1,13 @@
+name: T9f - Exact-ref allowlist entry, literal allowed tag
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call action using the exact tag that matches the allowlist entry (pnpm/action-setup@v4)
+        uses: pnpm/action-setup@v4
+        continue-on-error: true
